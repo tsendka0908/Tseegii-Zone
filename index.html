@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sketch Zone</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script type="module" src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <div class="controls">
+                <div class="mode-buttons">
+                    <button id="smooth" class="active">Smooth</button>
+                    <button id="shape">Shape</button>
+                    <button id="eraser">Eraser</button>
+                </div>
+                <div class="color-pickers">
+                    <div class="color-container">
+                        <input type="color" class="color" id="solid-color" />
+                    </div>
+                    <div class="color-container active">
+                        <div class="color" id="hue-cycling"></div>
+                    </div>
+                </div>
+                <div class="group" id="outer-radius">
+                    <label>Outer</label>
+                    <input
+                        type="range"
+                        class="range"
+                        value="25"
+                        min="1"
+                        max="100"
+                    />
+                </div>
+                <div class="group" id="inner-radius">
+                    <label>Inner</label>
+                    <input
+                        type="range"
+                        class="range"
+                        value="0.5"
+                        min="0.1"
+                        max="1"
+                        step="0.1"
+                    />
+                </div>
+                <div class="group" id="number-of-sides">
+                    <label># of sides</label>
+                    <input
+                        type="range"
+                        class="range"
+                        value="5"
+                        min="2"
+                        max="10"
+                        step="1"
+                    />
+                </div>
+                <button id="clear">Clear</button>
+                <button id="download">Download</button>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+    </body>
+</html>
